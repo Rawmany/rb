@@ -3,52 +3,41 @@ import {
 } from "../../common/js/utils";
 
 hostReactAppReady().then(() => {
-	const gridItems = document.querySelectorAll('.grid_item');
 
-	if (window.innerWidth <= 768) {
-		gridItems.forEach(gridItem => {
-			const triggerBtn = gridItem.querySelector(".actions button");
-			const animatedElement = gridItem.querySelector('.animated');
-			const imgs = gridItem.querySelectorAll("img");
+	const items = document.querySelectorAll('.js-item');
 
-			triggerBtn.addEventListener('click', () => {
-				if (animatedElement) {
-					// Переключаем класс true
-					animatedElement.classList.toggle('true');
+	items.forEach(item => {
+		const button = item.querySelector('.js-button');
+		const block = item.querySelector('.js-animated');
+		let isActive = false;
 
-					// Переключаем класс filter для всех изображений
-					imgs.forEach(img => img.classList.toggle('filter'));
+		if (button) {
+			button.addEventListener('click', (e) => {
+				e.preventDefault();
+				item.classList.toggle('is-active');
+				block.classList.toggle('is-active');
+
+				if (isActive) {
+					button.textContent = 'Подробнее';
+					isActive = false;
+				} else {
+					button.textContent = 'Скрыть';
+					isActive = true;
 				}
 			});
-		});
-	} else {
-		gridItems.forEach(gridItem => {
-			gridItem.addEventListener('mouseover', () => {
-				const animatedElement = gridItem.querySelector('.animated');
-				if (animatedElement) {
-					animatedElement.classList.add('true');
-					const imgs = gridItem.querySelectorAll("img");
-					imgs.forEach((img) => {
-						img.classList.add("filter");
-					})
+		}
 
-				}
+		if (window.innerWidth > 768) {
+			item.addEventListener('mouseover', (e) => {
+				item.classList.add('is-active');
+				block.classList.add('is-active');
 			});
 
-			gridItem.addEventListener('mouseout', () => {
-				const animatedElement = gridItem.querySelector('.animated');
-				if (animatedElement) {
-					animatedElement.classList.remove('true');
-					const imgs = gridItem.querySelectorAll("img");
-					imgs.forEach((img) => {
-						img.classList.remove("filter");
-					})
-				}
+			item.addEventListener('mouseleave', (e) => {
+				item.classList.remove('is-active');
+				block.classList.remove('is-active');
 			});
-		});
-	}
-
-
-
+		}
+	});
 
 });

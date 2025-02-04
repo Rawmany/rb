@@ -8,6 +8,7 @@
 		'/site/sunmar.ru/markup/global.html',
 		'/site/sunmar.ru/markup/main.html',
 		'/site/sunmar.ru/markup/hero-text.html',
+		'/site/sunmar.ru/markup/befor.html',
 		'/site/sunmar.ru/markup/contacts.html',
 	],
 }

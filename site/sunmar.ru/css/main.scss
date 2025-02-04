@@ -2,10 +2,11 @@
 @import "../../common/css/global-variables";
 
 section.kv > article .contenu {
+	max-width: 1920px !important;
 	.kv-main-banner {
 		position: relative;
 		width: 100%;
-		aspect-ratio: 137/52;
+		aspect-ratio: 192/50;
 		border-radius: 32px;
 		overflow: hidden;
 
@@ -89,6 +90,56 @@ section.kv > article .contenu {
 		picture {
 			position: relative;
 			z-index: 2;
+		}
+	}
+}
+section.hero.benefits {
+	article	{
+		.contenu {
+
+			.hero_items {
+				display: grid;
+				gap: 2em;
+				width: 100%;
+				grid-template-columns: repeat(3, 1fr);
+
+				@media screen and (max-width: 768px) {
+					grid-template-columns: repeat(1, 1fr);
+
+				}
+
+				.hero_item {
+					max-width: 27em;
+					display: flex;
+					position: relative;
+					align-items: center;
+					background-color: #F8F8F8;
+					-webkit-border-radius: 1.5em;
+					-moz-border-radius: 1.5em;
+					border-radius: 1.5em;
+					padding: 0 2em;
+					width: 100%;
+					justify-content: space-between;
+					gap: 1em;
+
+					@media screen and (max-width: 768px) {
+						max-width: 100%;
+					}
+
+
+
+					.text {
+						font-size: 1em;
+						font-weight: 600;
+					}
+
+					img {
+						max-width: 7.5em;
+						object-fit: contain;
+					}
+
+				}
+			}
 		}
 	}
 }

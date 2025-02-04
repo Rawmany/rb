@@ -7,6 +7,7 @@
 	contents: [
 		'/site/coral.ru/markup/global.html',
 		'/site/coral.ru/markup/hero-text.html',
-		'/site/coral.ru/markup/bonus.html'
+		'/site/coral.ru/markup/bonus.html',
+		'/site/coral.ru/markup/timer.html',
 	],
 }

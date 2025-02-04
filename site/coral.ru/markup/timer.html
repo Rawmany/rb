@@ -1,0 +1,484 @@
+<body>
+<div class="layout-container-limit center">
+
+    <style>
+        section.countdown {
+            width: 100vw;
+            max-width: 1920px;
+            position: relative;
+            overflow: hidden
+        }
+
+        section.countdown > article {
+            max-width: 1370px;
+            margin: auto;
+            font-size: 20px
+        }
+
+        @media screen and (max-width: 1439px) {
+            section.countdown > article {
+                font-size: 16.6644px
+            }
+        }
+
+        @media screen and (max-width: 1199px) {
+            section.countdown > article {
+                font-size: 1.38985vw
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            section.countdown > article {
+                font-size: 3.33333vw
+            }
+        }
+
+        @media screen and (max-width: 1439px) {
+            section.countdown > article {
+                max-width: 1130px
+            }
+        }
+
+        @media screen and (max-width: 1199px) {
+            section.countdown > article {
+                max-width: 100%
+            }
+        }
+
+
+            section.hero > article .actions.mr_1 {
+        margin-right: 1em !important
+            }
+
+            section.hero > article .actions > button, section.hero > article .actions > a {
+        text-transform: uppercase
+            }
+
+            section.countdown > article .contenu {
+        gap: 1em;
+        font-family: Manrope, sans-serif;
+        flex-direction: row !important;
+        padding: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+            }
+
+            @media screen and (max-width: 768px) {
+        section.countdown > article .contenu {
+            position: relative
+        }
+            }
+
+            section.countdown > article .contenu h1 {
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 600
+            }
+
+            @media (max-width: 768px) {
+        section.countdown > article .contenu {
+            flex-direction: column !important;
+            padding-bottom: 1.3em !important
+        }
+            }
+
+            section.countdown {
+        --font-size: 3.5em;
+        --min-width: 1.2em;
+        --white: #fff;
+        --margin-inline: .1em;
+        background-image: url(https://b2ccdn.coral.ru/content/new_images_r/timer/bg-t.png);
+        background-repeat: no-repeat;
+        border-radius: 1em;
+        margin-top: 2.5em;
+        width: 100% !important;
+        margin-bottom: 2em;
+            }
+
+            @media screen and (max-width: 768px) {
+        section.countdown {
+            background-image: none;
+            overflow: visible !important;
+            margin-top: 20vw !important;
+        }
+            }
+
+            section.countdown .content {
+        flex-shrink: 0;
+        align-items: center;
+        gap: 1em;
+        padding: 1em;
+        display: flex
+            }
+
+            @media (max-width: 768px) {
+        section.countdown .content {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0
+        }
+            }
+
+            section.countdown .content > svg {
+        width: 4em;
+        height: 5em
+            }
+
+            section.countdown .content > p {
+        color: #000 !important;
+        font-family: "Manrope", sans-serif;
+            }
+
+            @media (max-width: 768px) {
+        section.countdown .content > p {
+            text-align: left;
+            margin-bottom: 2em;
+            font-size: 2em
+        }
+            }
+
+            section.countdown .content > p > span {
+        font-weight: 400
+            }
+
+            @media screen and (max-width: 768px) {
+        section.countdown .content > p > span {
+            font-size: .5em
+        }
+            }
+
+            section.countdown .content > p > span.RB {
+        background: var(--CORAL-main_gradient, linear-gradient(46deg, #fb7099 0%, #f0ab13 100%));
+        -webkit-background-clip: text;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 900
+            }
+
+            section.countdown .time-count {
+        border-radius: 1em;
+        flex: 1;
+        margin: 0 !important
+            }
+
+            @media (max-width: 768px) {
+        section.countdown .time-count {
+            width: 100%;
+            z-index: 0;
+            min-height: 9em;
+            background: #fff;
+            order: -1;
+            padding: 1em;
+            position: absolute;
+            top: -15%;
+            box-shadow: 0 21px 21px rgba(0, 0, 0, .05), 0 22px 20px rgba(0, 0, 0, .05)
+        }
+            }
+
+            section.countdown .time-count__title {
+        text-align: center;
+        color: var(--white);
+        margin: 0 0 35px;
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 47px
+            }
+
+            section.countdown .time-count__content {
+        justify-content: center;
+        align-items: center;
+        display: flex
+            }
+
+            section.countdown .time-count__item {
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        display: flex
+            }
+
+            section.countdown .time-count__val {
+        min-width: var(--min-width);
+        color: #33c2ff;
+        font-size: 2.25em;
+        font-weight: 600;
+        line-height: 1
+            }
+
+            section.countdown .time-count__separator {
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: .5em;
+        margin-inline: var(--margin-inline);
+        color: #33c2ff;
+        align-items: center;
+        font-size: 2.25em;
+        font-weight: 400;
+        display: flex
+            }
+
+            section.countdown .time-count__text {
+        color: #000;
+        font-size: 1em;
+        font-weight: 400;
+        line-height: 20px
+            }
+
+            section.countdown article .contenu .actions a {
+        height: 3.5em;
+        background: #33c2ff;
+        margin-bottom: 0.5em;
+        font-family: inherit;
+        line-height: inherit;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        cursor: pointer;
+        border: 0;
+        border-radius: 0.5em;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1.5em;
+        text-decoration: none !important;
+        transition: background .5s;
+        display: inline-flex;
+        font-size: inherit !important;
+        color: #fff !important;
+        outline: none !important;
+            }
+        .sp_bold {
+            font-weight: 700 !important;
+        }
+            @media screen and (max-width: 768px) {
+        .timer_box {
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background-image: url(https://b2ccdn.coral.ru/content/new_images_r/timer/bg-t_m.png);
+            background-size: 100% 100%;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 1em;
+            display: flex;
+            overflow: hidden
+        }
+
+        .timer_box .sp_bold {
+            font-size: .75em !important;
+        }
+            }
+    </style>
+    <section class="hero countdown">
+        <article>
+            <div class="contenu">
+                <div class="content">
+                    <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="26.6943" cy="27" rx="26.6943" ry="27" fill="#0092D0"></ellipse>
+                        <path d="M16.9443 18L26.6943 12L36.4443 18V42H16.9443V18Z" stroke="white" stroke-width="1.6" stroke-linejoin="round"></path>
+                        <circle cx="22.9446" cy="24" r="2.25" stroke="white" stroke-width="1.6"></circle>
+                        <circle cx="30.4443" cy="34.5" r="2.25" stroke="white" stroke-width="1.6"></circle>
+                        <path d="M32.6946 23.25L20.6946 35.25" stroke="white" stroke-width="1.6" stroke-linejoin="round"></path>
+                    </svg>
+                    <p>Торопитесь выгодно забронировать отпуск <br> в Турции по акции «Раннее бронирование» <br><span class="sp_bold">Предоплата всего 20% </span>
+                    </p>
+                </div>
+                <div class="time-count">
+                    <div class="time-count__content">
+                        <div class="time-count__item time-count__days">
+                            <div class="time-count__val">00</div>
+                            <span class="time-count__text">дней</span>
+                        </div>
+                        <div class="time-count__separator">:</div>
+                        <div class="time-count__item time-count__hours">
+                            <div class="time-count__val">00</div>
+                            <span class="time-count__text">часов</span>
+                        </div>
+                        <div class="time-count__separator">:</div>
+                        <div class="time-count__item time-count__minutes">
+                            <div class="time-count__val">00</div>
+                            <span class="time-count__text">минут</span>
+                        </div>
+                        <div class="time-count__separator">:</div>
+                        <div class="time-count__item time-count__seconds">
+                            <div class="time-count__val">00</div>
+                            <span class="time-count__text">секунд</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="actions mr_1">
+                    <a href="https://new.coral.ru/hot-offers/rannee-bronirovanie-leto/" target="_blank">забронировать</a>
+                </div>
+            </div>
+        </article>
+    </section>
+    <script type="text/javascript">
+        function asyncGeneratorStep(e, t, n, o, r, c, u) {
+            try {
+                var a = e[c](u),
+                    i = a.value
+            } catch (e) {
+                return void n(e)
+            }
+            a.done ? t(i) : Promise.resolve(i).then(o, r)
+        }
+
+        function _asyncToGenerator(e) {
+            return function() {
+                var t = this,
+                    n = arguments;
+                return new Promise((function(o, r) {
+                    var c = e.apply(t, n);
+
+                    function u(e) {
+                        asyncGeneratorStep(c, o, r, u, a, "next", e)
+                    }
+
+                    function a(e) {
+                        asyncGeneratorStep(c, o, r, u, a, "throw", e)
+                    }
+
+                    u(void 0)
+                }))
+            }
+        }
+
+        var __generator = this && this.__generator || function(e, t) {
+            var n, o, r, c, u = {
+                label: 0,
+                sent: function() {
+                    if (1 & r[0]) throw r[1];
+                    return r[1]
+                },
+                trys: [],
+                ops: []
+            };
+            return c = {
+                next: a(0),
+                throw: a(1),
+                return: a(2)
+            }, "function" == typeof Symbol && (c[Symbol.iterator] = function() {
+                return this
+            }), c;
+
+            function a(c) {
+                return function(a) {
+                    return function(c) {
+                        if (n) throw new TypeError("Generator is already executing.");
+                        for (; u;) try {
+                            if (n = 1, o && (r = 2 & c[0] ? o.return : c[0] ? o.throw || ((r = o.return) && r.call(o), 0) : o.next) && !(r = r.call(o, c[1])).done) return r;
+                            switch (o = 0, r && (c = [2 & c[0], r.value]), c[0]) {
+                                case 0:
+                                case 1:
+                                    r = c;
+                                    break;
+                                case 4:
+                                    return u.label++, {
+                                        value: c[1],
+                                        done: !1
+                                    };
+                                case 5:
+                                    u.label++, o = c[1], c = [0];
+                                    continue;
+                                case 7:
+                                    c = u.ops.pop(), u.trys.pop();
+                                    continue;
+                                default:
+                                    if (!(r = u.trys, (r = r.length > 0 && r[r.length - 1]) || 6 !== c[0] && 2 !== c[0])) {
+                                        u = 0;
+                                        continue
+                                    }
+                                    if (3 === c[0] && (!r || c[1] > r[0] && c[1] < r[3])) {
+                                        u.label = c[1];
+                                        break
+                                    }
+                                    if (6 === c[0] && u.label < r[1]) {
+                                        u.label = r[1], r = c;
+                                        break
+                                    }
+                                    if (r && u.label < r[2]) {
+                                        u.label = r[2], u.ops.push(c);
+                                        break
+                                    }
+                                    r[2] && u.ops.pop(), u.trys.pop();
+                                    continue
+                            }
+                            c = t.call(e, u)
+                        } catch (e) {
+                            c = [6, e], o = 0
+                        } finally {
+                            n = r = 0
+                        }
+                        if (5 & c[0]) throw c[1];
+                        return {
+                            value: c[0] ? c[1] : void 0,
+                            done: !0
+                        }
+                    }([c, a])
+                }
+            }
+        };
+
+        function docReady(e) {
+            return _docReady.apply(this, arguments)
+        }
+
+        function _docReady() {
+            return (_docReady = _asyncToGenerator((function(e) {
+                return __generator(this, (function(t) {
+                    return [2, new Promise((function(t) {
+                        "complete" === document.readyState ? (e && e(), t()) : (document.addEventListener("readystatechange", (function() {
+                            "complete" === document.readyState && e && e()
+                        })), t())
+                    }))]
+                }))
+            }))).apply(this, arguments)
+        }
+
+        docReady((function() {
+            setTimeout((function() {
+                var e = function(e, t) {
+                        return t[e % 100 > 4 && e % 100 < 20 ? 2 : [2, 0, 1, 1, 1, 2][e % 10 < 5 ? e % 10 : 5]]
+                    },
+                    t = function() {
+                        var e = window.innerWidth,
+                            t = document.querySelector(".countdown"),
+                            n = t.querySelector(".contenu"),
+                            o = t.querySelector(".time-count"),
+                            r = t.querySelector(".content"),
+                            c = t.querySelector(".actions"),
+                            u = document.querySelector(".timer_box");
+                        e <= 768 && !f ? (u || ((u = document.createElement("div")).className = "timer_box", n.appendChild(u)), u.appendChild(r), u.appendChild(c), f = !0) : e > 768 && f && (u && (n.insertBefore(r, o), n.insertBefore(c, u), u.remove()), f = !1)
+                    },
+                    n = "31",
+                    o = "01",
+                    r = "2025",
+                    c = "23",
+                    u = "59",
+                    a = document.querySelector(".time-count__days .time-count__val"),
+                    i = document.querySelector(".time-count__hours .time-count__val"),
+                    l = document.querySelector(".time-count__minutes .time-count__val"),
+                    d = document.querySelector(".time-count__seconds .time-count__val"),
+                    s = document.querySelector(".time-count__days .time-count__text"),
+                    m = document.querySelector(".time-count__hours .time-count__text"),
+                    y = document.querySelector(".time-count__minutes .time-count__text"),
+                    _ = (document.querySelector(".time-count__seconds .time-count__text"), setInterval((function() {
+                        var t = function(e) {
+                                return e < 10 ? "0".concat(e) : e
+                            },
+                            f = new Date("".concat(r, "-").concat(o, "-").concat(n, "T").concat(c, ":").concat(u, ":00+03:00")),
+                            p = f - new Date,
+                            h = Math.floor(p / 1e3 / 60 / 60 / 24),
+                            v = Math.floor(p / 1e3 / 60 / 60) % 24,
+                            S = Math.floor(p / 1e3 / 60) % 60,
+                            w = Math.floor(p / 1e3) % 60;
+                        a.textContent = t(h), i.textContent = t(v), l.textContent = t(S), d.textContent = t(w), s.textContent = e(h, ["день", "дня", "дней"]), m.textContent = e(v, ["час", "часа", "часов"]), y.textContent = e(S, ["минута", "минуты", "минут"]), new Date >= f && (document.querySelector("section.hero.countdown").style.display = "none", clearInterval(_))
+                    }), 1e3)),
+                    f = !1;
+                t(), window.addEventListener("resize", t)
+            }), 0)
+        }));
+    </script>
+</div>
+</body>

@@ -118,6 +118,30 @@ section.main_grid {
         -moz-border-radius: 1.5em;
         border-radius: 1.5em;
         overflow: hidden;
+        transition: 0.3s linear all;
+
+        &--1 {
+          background-image: url("/site/coral.ru/assets/im-1.webp");
+          height: 40em;
+          background-size: cover;
+
+          @media screen and (max-width: 768px) {
+            height: 280px;
+            background-image: url("/site/coral.ru/assets/im-1m.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+
+          &.is-active {
+            background-image: url("/site/coral.ru/assets/img_1d_blured.webp");
+
+            @media screen and (max-width: 768px) {
+              height: 342px;
+              background-image: url("/site/coral.ru/assets/img_1_blured.webp");
+            }
+          }
+        }
+
 
         img {
           display: flex;
@@ -136,7 +160,17 @@ section.main_grid {
           top: 10%;
           left: 20%;
           transform: translate(-20%, -10%);
-			height: 28em;
+          height: 28em;
+
+          @media screen and (max-width: 768px) {
+            width: 100%;
+            padding: 16px;
+            position: relative;
+            top: unset;
+            left: unset;
+            transform: none;
+            height: 100%;
+          }
 
           .title {
             font-size: 2.625em;
@@ -155,10 +189,25 @@ section.main_grid {
           .animated {
             display: flex;
             flex-direction: column;
-            height: 0;
-            transition: all .5s ease-in-out;
+            opacity: 0;
+            visibility: hidden;
             overflow: hidden;
             margin-bottom: 2em;
+            transition: 0.3s linear all;
+            height: 0;
+
+            &.is-active {
+              height: auto;
+              opacity: 1;
+              visibility: visible;
+              margin-top: 20px;
+
+              @media screen and (max-width: 768px) {
+                opacity: 1;
+                visibility: visible;
+                height: auto;
+              }
+            }
 
             &.true {
               height: 100%;
@@ -179,6 +228,7 @@ section.main_grid {
       flex-direction: column;
       gap: 1.5em;
       max-width: 42em;
+      width: 100%;
 
       @media screen and (max-width: 768px) {
         flex-direction: column;
@@ -191,6 +241,51 @@ section.main_grid {
         -moz-border-radius: 1.5em;
         border-radius: 1.5em;
         overflow: hidden;
+        transition: 0.3s linear all;
+
+        &--2 {
+          background-image: url("/site/coral.ru/assets/im-2.webp");
+          height: 19.25em;
+          background-size: cover;
+
+          @media screen and (max-width: 768px) {
+            height: 240px;
+            background-image: url("/site/coral.ru/assets/im-2m.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+
+          &.is-active {
+            background-image: url("/site/coral.ru/assets/img_2_blured.webp");
+
+            @media screen and (max-width: 768px) {
+              height: 332px;
+              background-image: url("/site/coral.ru/assets/img_2m_blured.webp");
+            }
+          }
+        }
+
+        &--3 {
+          background-image: url("/site/coral.ru/assets/im-3.webp");
+          height: 19.25em;
+          background-size: cover;
+
+          @media screen and (max-width: 768px) {
+            height: 240px;
+            background-image: url("/site/coral.ru/assets/im-3m.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+
+          &.is-active {
+            background-image: url("/site/coral.ru/assets/img_3_blured.webp");
+
+            @media screen and (max-width: 768px) {
+              height: 385px;
+              background-image: url("/site/coral.ru/assets/img_3m_blured.webp");
+            }
+          }
+        }
 
         img {
           display: flex;
@@ -213,11 +308,15 @@ section.main_grid {
           width: 90%;
 
           @media screen and (max-width: 768px) {
-            top: 15%;
-            left: 20%;
-            transform: translate(-15%, -25%);
+            width: 100%;
+            padding: 16px;
+            position: relative;
+            top: unset;
+            left: unset;
+            transform: none;
+            height: 100%;
           }
-          
+
           .shield {
             color: white;
             background: rgba(95, 96, 98, 0.56);
@@ -245,6 +344,19 @@ section.main_grid {
             transition: all .5s ease-in-out;
             overflow: hidden;
 
+            &.is-active {
+              height: auto;
+              opacity: 1;
+              visibility: visible;
+              margin-top: 10px;
+
+              @media screen and (max-width: 768px) {
+                opacity: 1;
+                visibility: visible;
+                height: auto;
+              }
+            }
+
             &.true {
               height: 100%;
               margin-top: .5em;
@@ -265,11 +377,45 @@ section.main_grid {
     .actions {
       display: flex;
       gap: 1em;
+
+      @media screen and (max-width: 768px) {
+        margin-top: auto;
+      }
+
       a {
         background-color: #fff;
         color: #000000;
         padding: .75em 1em;
+
+        @media screen and (max-width: 768px) {
+          height: 36px;
+          display: flex;
+          align-items: center;
+          padding-block: 0;
+          padding-inline: 16px;
+          font-size: 16px;
+
+          &.blue-button {
+            background-color: #0092d0;
+            color: #fff;
+          }
+        }
       }
     }
+  }
+}
+
+section.main_grid .grid_items .left .grid_item .info .text,
+section.main_grid .grid_items .right .grid_item .info .text {
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+  }
+}
+
+section.main_grid .grid_items .left .grid_item .info .animated,
+section.main_grid .grid_items .right .grid_item .info .animated {
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+    margin-top: 20px;
   }
 }
